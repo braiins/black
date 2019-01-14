@@ -2515,7 +2515,7 @@ def normalize_string_prefix(leaf: Leaf, remove_u_prefix: bool = False) -> None:
 
 
 def normalize_string_quotes(leaf: Leaf) -> None:
-    """Prefer double quotes but only if it doesn't cause more escaping.
+    """Prefer single quotes but only if it doesn't cause more escaping.
 
     Adds or removes backslashes as appropriate. Doesn't parse and fix
     strings nested in f-strings (yet).
@@ -2575,8 +2575,8 @@ def normalize_string_quotes(leaf: Leaf) -> None:
     if new_escape_count > orig_escape_count:
         return  # Do not introduce more escaping
 
-    if new_escape_count == orig_escape_count and orig_quote == '"':
-        return  # Prefer double quotes
+    if new_escape_count == orig_escape_count and orig_quote == "'":
+        return  # Prefer single quotes
 
     leaf.value = f"{prefix}{new_quote}{new_body}{new_quote}"
 

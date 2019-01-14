@@ -9,6 +9,6 @@ B"hello"
 
 #!/usr/bin/env python3.6
 
-name = r"Łukasz"
-f"hello {name}"
-b"hello"
+name = r'Łukasz'
+f'hello {name}'
+b'hello'

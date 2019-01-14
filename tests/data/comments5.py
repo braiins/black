@@ -25,7 +25,7 @@ try:
         w.write(data)
 
 except OSError:
-    print("problems")
+    print('problems')
 
 import sys
 
@@ -67,5 +67,5 @@ def g():
     ...
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

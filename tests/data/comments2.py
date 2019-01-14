@@ -166,23 +166,23 @@ from com.my_lovely_company.my_lovely_team.my_lovely_project.my_lovely_component 
 
 __all__ = [
     # Super-special typing primitives.
-    "Any",
-    "Callable",
-    "ClassVar",
+    'Any',
+    'Callable',
+    'ClassVar',
     # ABCs (from collections.abc).
-    "AbstractSet",  # collections.abc.Set.
-    "ByteString",
-    "Container",
+    'AbstractSet',  # collections.abc.Set.
+    'ByteString',
+    'Container',
     # Concrete collection types.
-    "Counter",
-    "Deque",
-    "Dict",
-    "DefaultDict",
-    "List",
-    "Set",
-    "FrozenSet",
-    "NamedTuple",  # Not really a type.
-    "Generator",
+    'Counter',
+    'Deque',
+    'Dict',
+    'DefaultDict',
+    'List',
+    'Set',
+    'FrozenSet',
+    'NamedTuple',  # Not really a type.
+    'Generator',
 ]
 
 not_shareables = [
@@ -198,14 +198,14 @@ not_shareables = [
     Exception(),
     42,
     100.0,
-    "spam",
+    'spam',
     # user-defined types and objects
     Cheese,
-    Cheese("Wensleydale"),
-    SubBytes(b"spam"),
+    Cheese('Wensleydale'),
+    SubBytes(b'spam'),
 ]
 
-if "PYTHON" in os.environ:
+if 'PYTHON' in os.environ:
     add_compiler(compiler_from_env())
 else:
     # for compiler in compilers.values():
@@ -277,7 +277,7 @@ short
     ]
     lcomp3 = [
         # This one is actually too long to fit in a single line.
-        element.split("\n", 1)[0]
+        element.split('\n', 1)[0]
         # yup
         for element in collection.select_elements()
         # right
@@ -293,7 +293,7 @@ short
     # let's return
     return Node(
         syms.simple_stmt,
-        [Node(statement, result), Leaf(token.NEWLINE, "\n")],  # FIXME: \r\n?
+        [Node(statement, result), Leaf(token.NEWLINE, '\n')],  # FIXME: \r\n?
     )
 
 

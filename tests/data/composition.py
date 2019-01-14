@@ -1,22 +1,22 @@
 class C:
     def test(self) -> None:
-        with patch("black.out", print):
+        with patch('black.out', print):
             self.assertEqual(
-                unstyle(str(report)), "1 file reformatted, 1 file failed to reformat."
+                unstyle(str(report)), '1 file reformatted, 1 file failed to reformat.'
             )
             self.assertEqual(
                 unstyle(str(report)),
-                "1 file reformatted, 1 file left unchanged, 1 file failed to reformat.",
+                '1 file reformatted, 1 file left unchanged, 1 file failed to reformat.',
             )
             self.assertEqual(
                 unstyle(str(report)),
-                "2 files reformatted, 1 file left unchanged, "
-                "1 file failed to reformat.",
+                '2 files reformatted, 1 file left unchanged, '
+                '1 file failed to reformat.',
             )
             self.assertEqual(
                 unstyle(str(report)),
-                "2 files reformatted, 2 files left unchanged, "
-                "2 files failed to reformat.",
+                '2 files reformatted, 2 files left unchanged, '
+                '2 files failed to reformat.',
             )
             for i in (a,):
                 if (
@@ -40,7 +40,7 @@ class C:
             items=items[:num_items]
         )
         return (
-            "Utterly failed doctest test for %s\n"
+            'Utterly failed doctest test for %s\n'
             '  File "%s", line %s, in %s\n\n%s'
             % (test.name, test.filename, lineno, lname, err)
         )
@@ -70,7 +70,7 @@ class C:
             key7: value7,
             key8: value8,
             key9: value9,
-        } == expected, "Not what we expected"
+        } == expected, 'Not what we expected'
 
         assert expected == {
             key1: value1,
@@ -82,7 +82,7 @@ class C:
             key7: value7,
             key8: value8,
             key9: value9,
-        }, "Not what we expected"
+        }, 'Not what we expected'
 
         assert expected == {
             key1: value1,
@@ -108,8 +108,8 @@ class C:
             key8: value8,
             key9: value9,
         } == expected(
-            value, is_going_to_be="too long to fit in a single line", srsly=True
-        ), "Not what we expected"
+            value, is_going_to_be='too long to fit in a single line', srsly=True
+        ), 'Not what we expected'
 
         assert {
             key1: value1,
@@ -122,11 +122,11 @@ class C:
             key8: value8,
             key9: value9,
         } == expected, (
-            "Not what we expected and the message is too long to fit in one line"
+            'Not what we expected and the message is too long to fit in one line'
         )
 
         assert expected(
-            value, is_going_to_be="too long to fit in a single line", srsly=True
+            value, is_going_to_be='too long to fit in a single line', srsly=True
         ) == {
             key1: value1,
             key2: value2,
@@ -137,7 +137,7 @@ class C:
             key7: value7,
             key8: value8,
             key9: value9,
-        }, "Not what we expected"
+        }, 'Not what we expected'
 
         assert expected == {
             key1: value1,
@@ -150,7 +150,7 @@ class C:
             key8: value8,
             key9: value9,
         }, (
-            "Not what we expected and the message is too long to fit "
+            'Not what we expected and the message is too long to fit '
             "in one line because it's too long"
         )
 

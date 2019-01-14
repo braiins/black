@@ -28,7 +28,7 @@ def f(a, **kwargs) -> A:
     with cache_dir():
         if something:
             result = CliRunner().invoke(
-                black.main, [str(src1), str(src2), "--diff", "--check"]
+                black.main, [str(src1), str(src2), '--diff', '--check']
             )
     return A(
         very_long_argument_name1=very_long_value_for_the_argument,
@@ -38,16 +38,16 @@ def f(a, **kwargs) -> A:
 
 
 def g():
-    "Docstring."
+    'Docstring.'
 
     def inner():
         pass
 
-    print("Inner defs should breathe a little.")
+    print('Inner defs should breathe a little.')
 
 
 def h():
     def inner():
         pass
 
-    print("Inner defs should breathe a little.")
+    print('Inner defs should breathe a little.')

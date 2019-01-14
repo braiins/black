@@ -196,7 +196,7 @@ from library import some_connection, some_decorator
 from third_party import (X,
                          Y, Z)
 # fmt: on
-f"trigger 3.6 mode"
+f'trigger 3.6 mode'
 # Comment 1
 
 # Comment 2
@@ -224,7 +224,7 @@ many_args=[1,2,3]
 def function_signature_stress_test(number:int,no_annotation=None,text:str='default',* ,debug:bool=False,**kwargs) -> str:
  return text[number:-1]
 # fmt: on
-def spaces(a=1, b=(), c=[], d={}, e=True, f=-1, g=1 if False else 2, h="", i=r""):
+def spaces(a=1, b=(), c=[], d={}, e=True, f=-1, g=1 if False else 2, h='', i=r''):
     offset = attr.ib(default=attr.Factory(lambda: _r.uniform(10000, 200_000)))
     assert task._cancel_stack[: len(old_stack)] == old_stack
 
@@ -237,8 +237,8 @@ def spaces_types(
     e: bool = True,
     f: int = -1,
     g: int = 1 if False else 2,
-    h: str = "",
-    i: str = r"",
+    h: str = '',
+    i: str = r'',
 ):
     ...
 
@@ -283,7 +283,7 @@ def yield_expr():
     yield hello
     'unformatted'
     # fmt: on
-    "formatted"
+    'formatted'
     # fmt: off
     ( yield hello )
     'unformatted'
@@ -371,11 +371,11 @@ def single_literal_yapf_disable():
 
 
 cfg.rule(
-    "Default",
-    "address",
-    xxxx_xxxx=["xxx-xxxxxx-xxxxxxxxxx"],
-    xxxxxx="xx_xxxxx",
-    xxxxxxx="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    'Default',
+    'address',
+    xxxx_xxxx=['xxx-xxxxxx-xxxxxxxxxx'],
+    xxxxxx='xx_xxxxx',
+    xxxxxxx='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     xxxxxxxxx_xxxx=True,
     xxxxxxxx_xxxxxxxxxx=False,
     xxxxxx_xxxxxx=2,

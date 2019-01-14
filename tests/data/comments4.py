@@ -8,54 +8,54 @@ from com.my_lovely_company.my_lovely_team.my_lovely_project.my_lovely_component 
 
 class C:
     @pytest.mark.parametrize(
-        ("post_data", "message"),
+        ('post_data', 'message'),
         [
             # metadata_version errors.
             (
                 {},
-                "None is an invalid value for Metadata-Version. "
-                "Error: This field is required. "
-                "see "
-                "https://packaging.python.org/specifications/core-metadata",
+                'None is an invalid value for Metadata-Version. '
+                'Error: This field is required. '
+                'see '
+                'https://packaging.python.org/specifications/core-metadata',
             ),
             (
-                {"metadata_version": "-1"},
+                {'metadata_version': '-1'},
                 "'-1' is an invalid value for Metadata-Version. "
-                "Error: Unknown Metadata Version "
-                "see "
-                "https://packaging.python.org/specifications/core-metadata",
+                'Error: Unknown Metadata Version '
+                'see '
+                'https://packaging.python.org/specifications/core-metadata',
             ),
             # name errors.
             (
-                {"metadata_version": "1.2"},
+                {'metadata_version': '1.2'},
                 "'' is an invalid value for Name. "
-                "Error: This field is required. "
-                "see "
-                "https://packaging.python.org/specifications/core-metadata",
+                'Error: This field is required. '
+                'see '
+                'https://packaging.python.org/specifications/core-metadata',
             ),
             (
-                {"metadata_version": "1.2", "name": "foo-"},
+                {'metadata_version': '1.2', 'name': 'foo-'},
                 "'foo-' is an invalid value for Name. "
-                "Error: Must start and end with a letter or numeral and "
+                'Error: Must start and end with a letter or numeral and '
                 "contain only ascii numeric and '.', '_' and '-'. "
-                "see "
-                "https://packaging.python.org/specifications/core-metadata",
+                'see '
+                'https://packaging.python.org/specifications/core-metadata',
             ),
             # version errors.
             (
-                {"metadata_version": "1.2", "name": "example"},
+                {'metadata_version': '1.2', 'name': 'example'},
                 "'' is an invalid value for Version. "
-                "Error: This field is required. "
-                "see "
-                "https://packaging.python.org/specifications/core-metadata",
+                'Error: This field is required. '
+                'see '
+                'https://packaging.python.org/specifications/core-metadata',
             ),
             (
-                {"metadata_version": "1.2", "name": "example", "version": "dog"},
+                {'metadata_version': '1.2', 'name': 'example', 'version': 'dog'},
                 "'dog' is an invalid value for Version. "
-                "Error: Must start and end with a letter or numeral and "
+                'Error: Must start and end with a letter or numeral and '
                 "contain only ascii numeric and '.', '_' and '-'. "
-                "see "
-                "https://packaging.python.org/specifications/core-metadata",
+                'see '
+                'https://packaging.python.org/specifications/core-metadata',
             ),
         ],
     )
@@ -68,7 +68,7 @@ class C:
 
 def foo(list_a, list_b):
     results = (
-        User.query.filter(User.foo == "bar")
+        User.query.filter(User.foo == 'bar')
         .filter(  # Because foo.
             db.or_(User.field_a.astext.in_(list_a), User.field_b.astext.in_(list_b))
         )
@@ -85,7 +85,7 @@ def foo(list_a, list_b):
 def foo2(list_a, list_b):
     # Standalone comment reasonably placed.
     return (
-        User.query.filter(User.foo == "bar")
+        User.query.filter(User.foo == 'bar')
         .filter(
             db.or_(User.field_a.astext.in_(list_a), User.field_b.astext.in_(list_b))
         )
@@ -96,7 +96,7 @@ def foo2(list_a, list_b):
 def foo3(list_a, list_b):
     return (
         # Standlone comment but weirdly placed.
-        User.query.filter(User.foo == "bar")
+        User.query.filter(User.foo == 'bar')
         .filter(
             db.or_(User.field_a.astext.in_(list_a), User.field_b.astext.in_(list_b))
         )
